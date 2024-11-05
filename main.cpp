@@ -1,18 +1,26 @@
 #include <iostream>
 #include "Task.h"
+#include "DateTime.h"
 
 
 int main() {
 
-    std::string nometask="fareLaSpesa";
+    std::string nometask="fare";
 
-    std::string place="sicily";
+    std::string place="lucca";
 
-    Task obj(nometask,place);
+    DateTime dt(2024, 2, 29, 14, 30);
 
-    Task obj1(nometask);
 
-    std::cout<<obj1.getTaskName()<<" "<<obj1.getPlace()<<" "<<obj1.isCompleted();
+    Task *objP=new Task(nometask,place,dt);
+
+
+
+
+    Task *obj=Task::initializeFromFile(nometask);
+
+    obj->printTask();
+
 
 
     return 0;
