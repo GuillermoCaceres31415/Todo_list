@@ -56,7 +56,7 @@ Task *Task::initializeFromFile(std::string &n) {
 }
 
 void Task::printTask() {
-    std::cout<<taskName<<" "<<place<<" "<<dateTime.getYear()<<" "<<completed;
+    std::cout<<taskName<<" "<<place<<" "<<dateTime.getYear()<<" "<<completed<<std::endl;
 }
 
 const std::string &Task::getTaskName() const {
